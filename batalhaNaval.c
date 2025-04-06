@@ -67,9 +67,59 @@ int main() {
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+    int habilidadeCone[5][5];
+    int habilidadeCruz[5][5];
+    int habilidadeOctaedro[5][5];
 
+    // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            habilidadeCone[i][j] = 0;
+        }  
+    }
+
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            habilidadeCruz[i][j] = 0;
+        }  
+    }
+
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            habilidadeOctaedro[i][j] = 0;
+        }  
+    }
+
+    // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
+    printf("\nHabilidade de Cone..\n");
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            printf("%d ", habilidadeCone[i][j]);
+        } 
+        printf("\n"); 
+    }
+
+    printf("\nHabilidade de Cruz..\n");
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            printf("%d ", habilidadeCruz[i][j]);
+        } 
+        printf("\n"); 
+    }
+
+    printf("\nHabilidade de Octaegro..\n");
+    for (int i = 0; i < 5; i++)
+    {    
+        for (int j = 0; j < 5; j++){
+            printf("%d ", habilidadeOctaedro[i][j]);
+        } 
+        printf("\n"); 
+    }
     // Exemplos de exibição das habilidades:
     // Exemplo para habilidade em cone:
     // 0 0 1 0 0
