@@ -149,5 +149,16 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    // Exibir tabuleiro para o usuário com um monte de 8
+
+    // Solicitar para o usuário qual habilidade ele quer usar
+
+    // Solicitar para o usuário a linha
+
+    // Solicitar para o usuário a coluna
+
+    // Preencher no tabuleiro de 8 do usuário, os valores do tabuleiro, 0 quando agua, 3 quando navio, 8 quando não descoberto
+    // Exibir novamente o tabuleiro e solicitar novamente ataca e posicao, até que todos os navios sejam descobertos, ou que a qtd de vida dele zere
+
     return 0;
 }
