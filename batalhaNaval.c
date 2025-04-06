@@ -67,35 +67,48 @@ int main() {
 
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
-    int habilidadeCone[5][5];
-    int habilidadeCruz[5][5];
-    int habilidadeOctaedro[5][5];
+    int habilidadeCone[3][5];
+    int habilidadeCruz[3][5];
+    int habilidadeOctaedro[3][5];
 
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
-            habilidadeCone[i][j] = 0;
+            if(j >= 2 - i && j <= 2 + i){
+                habilidadeCone[i][j] = 1;
+            }else{
+                habilidadeCone[i][j] = 0;
+            }
         }  
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
-            habilidadeCruz[i][j] = 0;
+            if(i == 1 || j == 2){
+                habilidadeCruz[i][j] = 1;
+            }else{
+                habilidadeCruz[i][j] = 0;
+            }
+            
         }  
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
-            habilidadeOctaedro[i][j] = 0;
+            if((i == 1 || j == 2) && j < 4 && j > 0){
+                habilidadeOctaedro[i][j] = 1;
+            }else{
+                habilidadeOctaedro[i][j] = 0;
+            }           
         }  
     }
 
     // Sugestão: Exiba o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas atingidas.
     printf("\nHabilidade de Cone..\n");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
             printf("%d ", habilidadeCone[i][j]);
@@ -104,7 +117,7 @@ int main() {
     }
 
     printf("\nHabilidade de Cruz..\n");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
             printf("%d ", habilidadeCruz[i][j]);
@@ -113,7 +126,7 @@ int main() {
     }
 
     printf("\nHabilidade de Octaegro..\n");
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 3; i++)
     {    
         for (int j = 0; j < 5; j++){
             printf("%d ", habilidadeOctaedro[i][j]);
