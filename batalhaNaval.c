@@ -268,24 +268,38 @@ int main() {
                     switch (habilidadeSelecionada)
                     {
                         case 1: // Cone
-                            /* code */
+                            if (habilidadeCone[i-linhaSelecionada][j-colunaSelecionadaInt] == 1){
+                                tabuleiroJogador[i][j] = tabuleiro[i][j];
+                                if(tabuleiro[i][j] == 3){
+                                    acertouTiro = 1;
+                                    qtdNavioEncontrado++;
+                                }
+                            }
                             break;
                         case 2: // Cruz
-                            /* code */
+                            if (habilidadeCruz[i-linhaSelecionada][j-colunaSelecionadaInt] == 1){
+                                tabuleiroJogador[i][j] = tabuleiro[i][j];
+                                if(tabuleiro[i][j] == 3){
+                                    acertouTiro = 1;
+                                    qtdNavioEncontrado++;
+                                }
+                            }                            
                             break;
                         case 3: // Octaedro
-                            /* code */
+                            if (habilidadeOctaedro[i-linhaSelecionada][j-colunaSelecionadaInt] == 1){
+                                tabuleiroJogador[i][j] = tabuleiro[i][j];
+                                if(tabuleiro[i][j] == 3){
+                                    acertouTiro = 1;
+                                    qtdNavioEncontrado++;
+                                }
+                            }
                             break;
                     
                     default:
                         break;
-                    }
-                    tabuleiroJogador[i][j] = tabuleiro[i][j];
+                    }               
 
-                    if(tabuleiro[i][j] == 3){
-                        acertouTiro = 1;
-                        qtdNavioEncontrado++;
-                    }
+   
 
                 }
             }
